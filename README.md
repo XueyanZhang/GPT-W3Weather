@@ -16,16 +16,17 @@ The meat here is to show:
 1. how GPT connects to external data thru api
 2. how to set default API key
 
-### Example Action
+### Example Schema
 The schema here is JSON format, 
 following
-OpenAPI Specification (OAS) document.
+OpenAPI Specification (OAS) document.  
+(more at 
+[Swagger.io](https://swagger.io/solutions/getting-started-with-oas/#:~:text=,Standardize%20on%20OAS%20with%20SwaggerHub)
+and 
+[learn.openapis.org](https://learn.openapis.org/#:~:text=,standard%20for%20describing%20new%20APIs))
 
 ![image info](./figures/actions.png)
 
-#### Resources for OAS
-1. [Swagger.io](https://swagger.io/solutions/getting-started-with-oas/#:~:text=,Standardize%20on%20OAS%20with%20SwaggerHub)
-2. [learn.openapis.org](https://learn.openapis.org/#:~:text=,standard%20for%20describing%20new%20APIs)
 
 ### Default API_KEY
 YOUR_API_KEY is a MUST in calling:
@@ -33,17 +34,11 @@ YOUR_API_KEY is a MUST in calling:
 https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=London&aqi=no
 ```
 
-#### Issue
-
-GPT does not know where to retreive the API key.
-
-Simply adding API key at `Authentication` tab won't do the trick.
-
+GPT does not know where to retreive the API key.  
+Simply adding API key at `Authentication` tab won't do the trick.  
 GPT tends to hallusinate a fake API_KEY.
 
 ![image info](./figures/authentication.png)
-
-#### Solution
 
 Explicitly specify the API_KEY to use in `Instuctions` section.
 
